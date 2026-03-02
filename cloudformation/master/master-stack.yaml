@@ -40,6 +40,7 @@ Resources:
     Properties:
       TemplateURL: https://iac-bucket-azamcloud.s3.us-east-1.amazonaws.com/Route53.yaml
       Parameters:
+        EnvironmentName: !Ref EnvironmentName
         DomainName: !Ref DomainName
         HostedZoneId: !Ref HostedZoneId
         CloudFrontDomainName: !GetAtt CloudFrontStack.Outputs.CloudFrontDomainName
@@ -64,3 +65,4 @@ Resources:
         CodeBuildProjectName: !GetAtt CodeBuildStack.Outputs.CodeBuildProjectName
 
         
+
