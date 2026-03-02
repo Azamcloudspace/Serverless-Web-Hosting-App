@@ -27,7 +27,7 @@ Resources:
   ArtifactStoreBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "${EnvironmentName}-pipeline-artifacts"
+      BucketName: !Sub "${EnvironmentName}-s3bucketpipeline-artifacts"
 
   CodePipelineRole:
     Type: AWS::IAM::Role
@@ -133,6 +133,7 @@ Resources:
 Outputs:
   PipelineName:
     Value: !Ref Pipeline
+
 
 
 
