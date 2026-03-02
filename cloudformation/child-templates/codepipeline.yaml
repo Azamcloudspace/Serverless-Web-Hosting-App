@@ -126,12 +126,13 @@ Resources:
               Configuration:
                 ProjectName: !Ref CodeBuildProjectName
 
-    Tags:
-      - Key: Environment
-        Value: !Ref EnvironmentName
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
 
 Outputs:
   PipelineName:
     Value: !Ref Pipeline
+
 
 
