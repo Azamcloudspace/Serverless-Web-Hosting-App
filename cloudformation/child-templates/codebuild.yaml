@@ -10,7 +10,7 @@ Resources:
   CodebuildRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "${EnvironmentName}-codebuild-role"
+      RoleName: !Sub "${EnvironmentName}-build-role"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -70,5 +70,6 @@ Resources:
 Outputs:
   CodeBuildProjectName:
     Value: !Ref CodeBuildProject
+
 
 
