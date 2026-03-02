@@ -45,6 +45,7 @@ Resources:
                 Resource:
                   - !Sub "arn:aws:s3:::${BucketName}"
                   - !Sub "arn:aws:s3:::${BucketName}/*"
+                  - !Sub "arn:aws:s3:::${EnvironmentName}-s3bucketpipeline-artifacts/*"
 
 
   CodeBuildProject:
@@ -70,6 +71,7 @@ Resources:
 Outputs:
   CodeBuildProjectName:
     Value: !Ref CodeBuildProject
+
 
 
 
