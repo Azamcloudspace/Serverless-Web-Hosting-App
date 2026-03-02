@@ -50,7 +50,7 @@ Resources:
       TemplateURL: https://iac-bucket-azamcloud.s3.us-east-1.amazonaws.com/codebuild.yaml
       Parameters:
         EnvironmentName: !Ref EnvironmentName
-        BucketName: !Ref S3Stack.Outputs.S3BucketName
+        BucketName: !GetAtt S3Stack.Outputs.S3BucketName
 
   CodePipelineStack:
     Type: AWS::CloudFormation::Stack
@@ -62,4 +62,5 @@ Resources:
         GitHubRepo: !Ref GitHubRepo
         CodeStarConnectionArn: !Ref CodeStarConnectionArn
         CodeBuildProjectName: !GetAtt CodeBuildStack.Outputs.CodeBuildProjectName
+
         
