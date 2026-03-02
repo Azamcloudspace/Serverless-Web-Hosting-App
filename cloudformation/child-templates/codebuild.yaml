@@ -54,6 +54,7 @@ Resources:
       ServiceRole: !Ref CodeBuildRole
       Source:
         Type: CODEPIPELINE
+        BuildSpec: ci/buildspec.yml
       Artifacts:
         Type: CODEPIPELINE
       Environment:
@@ -68,3 +69,4 @@ Resources:
 Outputs:
   CodeBuildProjectName:
     Value: !Ref CodeBuildProject
+
