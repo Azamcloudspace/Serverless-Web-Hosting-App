@@ -11,7 +11,7 @@ phases:
       - echo "Uploading files to S3..."
       - aws s3 sync app/ s3://dev-s3bucketsite/
       - echo "Invalidating CloudFront cache..."
-      - aws cloudfront create-invalidation --distribution-id E1UT2E4RKDJXJ4 --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id E2HWR4F8JHF5LD --paths "/*"
 
 artifacts:
   files:
